@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Ouvidoria Interna - CompreSuaPeça</title>
+<link rel="icon" href="./imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <div>
+        <img class="logo-nav" src="./imagens/CSSP.png" alt="logo da Compre Sua Peça">
+    </div>
+    <nav class="menu-nav">
+        <ul class="menu-items">
+            <li><a target="_blank" href="https://www.compresuapeca.com.br/">Home</a></li>
+            <li><a target="_blank" href="https://www.compresuapeca.com.br/login?returnUrl=%2Faccount">Contato</a></li>
+            <li><a target="_blank" href="https://sualoja.compresuapeca.com.br/politica-de-privacidade/">Política de Privacidade</a></li>
+        </ul>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+<main>
+    
+    <section class="form-response">
+
+        <div class="form-container">
+            <h2 class="titleform">Ouvidoria Interna </h2>
+            <form id="denunciaForm" action="https://formspree.io/f/mjgawkab" method="post">
+                <div class="form-group">
+                    <label for="identificar">Deseja se identificar?</label>
+                    <select id="identificar" name="identificar" onchange="toggleContactInfo(this)" required>
+                        <option value="">-- Selecione --</option>
+                        <option value="nao">Não</option>
+                        <option value="sim">Sim</option>
+                    </select>
+                </div>
+                
+                <div class="form-group contact-info" id="contactInfo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu email">
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="categoria">Selecione a categoria:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">-- Selecione --</option>
+                        <option value="assedio_moral">Assédio moral</option>
+                        <option value="assedio_sexual">Assédio sexual</option>
+                        <option value="desvios_etica_conduta">Desvios éticos e de conduta</option>
+                        <option value="discriminacao">Discriminação</option>
+                        <option value="fraude">Fraude</option>
+                        <option value="furto_roubo">Furto ou Roubo</option>
+                        <option value="importunacao_sexual">Importunação Sexual</option>
+                        <option value="questoes_trabalhistas">Questões Trabalhistas</option>
+                        <option value="utilizacao_indevida">Utilização indevida de imagem ou nome da empresa</option>
+                        <option value="vazamento_informacao">Vazamento de informação</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="denuncia">Descreva seu relato:</label>
+                    <textarea id="denuncia" name="denuncia" rows="10" placeholder="" required></textarea>
+                </div>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+        
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
